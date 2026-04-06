@@ -1,0 +1,21 @@
+<svg width="1200" height="1600" viewBox="0 0 1200 1600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="1600" fill="#F7F3ED"/>
+  <rect x="40" y="40" width="1120" height="1520" rx="42" fill="#EEF3FB" stroke="#D3DEEE" stroke-width="2"/>
+  <rect x="102" y="160" width="996" height="1280" rx="34" fill="#F9FBFF" stroke="#D7E2F1" stroke-width="2"/>
+  <rect x="174" y="296" width="852" height="2" fill="#D8E1ED"/>
+  <rect x="174" y="1264" width="852" height="2" fill="#D8E1ED"/>
+  <rect x="174" y="760" width="224" height="12" rx="6" fill="#355884" fill-opacity="0.22"/>
+  <rect x="174" y="800" width="332" height="12" rx="6" fill="#355884" fill-opacity="0.16"/>
+  <rect x="174" y="840" width="286" height="12" rx="6" fill="#355884" fill-opacity="0.16"/>
+  <rect x="606" y="720" width="420" height="176" rx="28" fill="#163A65"/>
+  <rect x="662" y="778" width="226" height="10" rx="5" fill="#F7F3ED" fill-opacity="0.72"/>
+  <rect x="662" y="816" width="292" height="10" rx="5" fill="#F7F3ED" fill-opacity="0.58"/>
+  <rect x="662" y="854" width="184" height="10" rx="5" fill="#F7F3ED" fill-opacity="0.58"/>
+  <path d="M193 200H311" stroke="#163A65" stroke-width="14" stroke-linecap="round"/>
+  <text x="174" y="626" fill="#163A65" font-size="56" font-family="Georgia, 'Times New Roman', serif" letter-spacing="-1.4">
+    Northstar AI Concierge
+  </text>
+  <text x="174" y="690" fill="#355884" font-size="23" font-family="'Avenir Next', 'Helvetica Neue', Arial, sans-serif" letter-spacing="6">
+    LIVE CLIENT WALKTHROUGH
+  </text>
+</svg>
