@@ -184,11 +184,11 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <SectionHeading
               eyebrow="How It Works"
-              title="Six steps from first call to fully autonomous."
-              description="No internal project on your side. We handle the build, the training, the launch, and the ongoing tuning."
+              title="First call Monday. Handling real customers by Friday."
+              description="No internal project on your side. No dashboard handed back to you. We handle the build, the training, the launch, and everything after."
             />
 
-            <div className="mt-14 grid gap-8 md:grid-cols-2 lg:gap-10">
+            <div className="mt-14 grid gap-8 md:grid-cols-3 lg:gap-10">
               {howItWorksSteps.map((step, index) => (
                 <FadeIn key={step.step} delay={index * 0.07} y={16}>
                   <article className="border-t border-[#123b6b]/10 pt-7">
@@ -260,15 +260,13 @@ export default function Home() {
                 loop
                 playsInline
                 preload="auto"
-                poster="/media/northstar-proof-video-poster.png"
-              className="absolute inset-0 h-full w-full object-cover"
+                className="absolute inset-0 h-full w-full object-cover object-[center_40%]"
                 aria-hidden="true"
               >
-                <source src="/media/northstar-proof-video-ios.m4v" type="video/x-m4v" />
-                <source src="/media/northstar-proof-video.mp4" type="video/mp4" />
+                <source src="/media/hero-ocean.mp4" type="video/mp4" />
               </video>
 
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(165deg,rgba(8,18,34,0.04)_0%,rgba(8,18,34,0.16)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(165deg,rgba(4,12,28,0.18)_0%,rgba(4,12,28,0.38)_100%)]" />
               <div className="pointer-events-none absolute inset-0 rounded-[1.5rem] shadow-[inset_0_1px_0_rgba(255,255,255,0.24),inset_0_-1px_0_rgba(255,255,255,0.05)]" />
 
               <div className="relative flex min-h-[21rem] items-end p-4 sm:min-h-[23rem] sm:p-5 lg:min-h-[24rem] lg:p-6">
@@ -276,7 +274,7 @@ export default function Home() {
                 {roiOutcomes.map((item, index) => (
                   <FadeIn key={item.label} delay={index * 0.07} y={10}>
                     <div className="h-full rounded-[1rem] border border-white/16 bg-[linear-gradient(180deg,rgba(255,255,255,0.14)_0%,rgba(255,255,255,0.06)_100%)] px-4 py-4 backdrop-blur-xl shadow-[inset_0_1px_0_rgba(255,255,255,0.16),0_8px_20px_rgba(0,0,0,0.07)] sm:px-5 sm:py-5">
-                      <div className="font-heading text-[2.45rem] font-semibold tracking-[-0.06em] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.24)] sm:text-[2.9rem]">
+                      <div className="font-heading text-[1.7rem] font-semibold leading-[1.1] tracking-[-0.04em] text-white [text-shadow:0_2px_12px_rgba(0,0,0,0.24)] sm:text-[2rem]">
                         {item.value}
                       </div>
                       <p className="mt-2.5 max-w-xs text-sm leading-7 text-white/84">
@@ -475,7 +473,7 @@ export default function Home() {
         >
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <SectionHeading
-              eyebrow="Industries"
+              eyebrow="Who It's For"
               title="Best where a missed reply has real revenue attached to it."
               description={broaderCoverageNote}
             />
@@ -566,9 +564,11 @@ export default function Home() {
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-foreground/62">
                   {founderStory.label}
                 </p>
-                <p className="mt-4 text-sm leading-7 text-foreground/54">
-                  {founderStory.proofNote}
-                </p>
+                {founderStory.proofNote && (
+                  <p className="mt-4 text-sm leading-7 text-foreground/54">
+                    {founderStory.proofNote}
+                  </p>
+                )}
               </FadeIn>
             </div>
           </div>
@@ -741,15 +741,32 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="cta" className="bg-background py-20 md:py-28">
-          <FadeIn className="mx-auto max-w-5xl px-6 text-center md:px-8">
-            <div className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-[#355884]/56">
+        <section id="cta" className="relative isolate overflow-hidden">
+          {/* City traffic video background */}
+          <video
+            className="absolute inset-0 h-full w-full object-cover"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="none"
+            disablePictureInPicture
+            disableRemotePlayback
+            aria-hidden="true"
+          >
+            <source src="/media/cta-city.mp4" type="video/mp4" />
+          </video>
+          {/* Veil — dark enough for text legibility, light enough to feel the city */}
+          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(6,14,30,0.72)_0%,rgba(6,14,30,0.62)_100%)]" />
+
+          <FadeIn className="relative mx-auto max-w-5xl px-6 py-28 text-center md:px-8 md:py-36">
+            <div className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.3em] text-white/52">
               Book a call
             </div>
-            <h2 className="mt-6 font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-foreground md:text-7xl">
+            <h2 className="mt-6 font-heading text-5xl font-semibold leading-[0.98] tracking-[-0.055em] text-white md:text-7xl">
               Stop losing leads to silence.
             </h2>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-foreground/68">
+            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-white/72">
               Twenty minutes. We map the workflow, assess the fit, and give you
               a straight read — including if it is not the right move. If it is,
               the concierge is live inside a week. No internal project. No
@@ -757,14 +774,18 @@ export default function Home() {
             </p>
 
             <div className="mt-10 flex justify-center">
-              <Button asChild size="lg" className="px-8">
+              <Button
+                asChild
+                size="lg"
+                className="bg-white px-8 text-foreground hover:bg-white/90"
+              >
                 <a href={CALENDLY_URL} target="_blank" rel="noreferrer">
                   Book Your Free Strategy Call
                 </a>
               </Button>
             </div>
 
-            <p className="mt-4 text-sm leading-7 text-foreground/56">
+            <p className="mt-4 text-sm leading-7 text-white/44">
               No commitment. If it is wrong for your business, we will say so in
               the first call.
             </p>

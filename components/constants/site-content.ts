@@ -4,50 +4,51 @@ export const navigationLinks = [
   { label: "How It Works", href: "#process" },
   { label: "Demo", href: "#demo" },
   { label: "Difference", href: "#comparison" },
-  { label: "Industries", href: "#industries" },
+  { label: "Who It's For", href: "#industries" },
   { label: "Pricing", href: "#pricing" },
   { label: "Founder", href: "#founder" },
+  { label: "Blog", href: "/blog" },
 ] as const;
 
 export const broaderCoverageNote =
-  "Velaeva is built first for high-intent service businesses, but the same operating model also adapts well to tourism, boutique retail, specialist supply, real estate, and other sectors where timing and follow-up matter.";
+  "It works wherever a missed reply has real revenue attached to it — and where the team cannot be glued to a phone around the clock. The situation matters more than the sector.";
 
 export const foundingSignals = [
   {
-    label: "Rollout path",
-    title: "Discovery, calibration, launch, then close-in tuning.",
+    label: "Fit-first",
+    title: "Nothing goes live until we've mapped exactly how your business works.",
     description:
-      "The first week is mapped before anything goes live, so the rollout feels deliberate instead of improvised. Discovery, source material, tone, channels, escalation, then launch.",
+      "The first phase is a proper discovery: where leads stall, what your buyers ask, how your team should sound, and what the hard edge cases actually are. The build starts after, not before.",
   },
   {
-    label: "Visible oversight",
-    title: "Every conversation stays inspectable, editable, and easy to pause.",
+    label: "Full visibility",
+    title: "Every conversation stays readable, pauseable, and fully under your control.",
     description:
-      "You can review full threads, see what triggered handoffs, and stop the concierge instantly if something feels off. Nothing runs as a black box.",
+      "You can review full threads, see what triggered any handoff, and stop the concierge instantly if something feels off. Nothing runs as a black box — ever.",
   },
   {
-    label: "Fit-first build",
-    title: "If the workflow is wrong for your business, that gets said before the build.",
+    label: "Honest fit",
+    title: "If it's not right for your operation, that gets said before any money changes hands.",
     description:
-      "Some teams need process cleanup before AI. Some industries need tighter escalation rules. We would rather surface that early than sell a messy rollout.",
+      "Some businesses need process cleanup before AI. Some need tighter escalation logic. We would rather walk away from a bad fit than sell a messy rollout.",
   },
 ] as const;
 
 export const trustBarItems = [
   {
-    value: "5-7 days",
-    label: "Go-live",
-    description: "Most deployments move from first call to live assistant inside a working week.",
+    value: "Live in 5 days",
+    label: "Not months. Not a project.",
+    description: "First call Monday. Handling real customers by Friday. No internal build required.",
   },
   {
-    value: "Full thread view",
-    label: "Oversight",
-    description: "Every conversation, handoff, and correction stays visible to your team.",
+    value: "Every reply, visible",
+    label: "Full control, zero babysitting.",
+    description: "You can read every thread, pause the concierge instantly, or override any response. You stay in charge.",
   },
   {
-    value: "Owner-light",
-    label: "Workload",
-    description: "We run the tuning, routing, and upkeep so the owner does not inherit another dashboard.",
+    value: "We run it for you",
+    label: "Not another tool to manage.",
+    description: "Monthly tuning, correction, and calibration handled by us. You check in when something feels off.",
   },
 ] as const;
 
@@ -112,71 +113,71 @@ export const operatingLayers = [
 
 export const proofMoments = [
   {
-    label: "Dealership groups",
-    title: "After-hours inventory questions stop dying in silence.",
+    label: "After hours",
+    title: "The buyer who enquires at 11 PM gets a useful answer — not a form, not silence.",
     description:
-      "Shoppers get a useful next step on stock, trade-ins, and test drives before the desk is back online.",
+      "High-intent questions arriving outside business hours get a clear, on-brand response immediately. The lead stays warm. Your team inherits context in the morning, not a cold restart.",
   },
   {
-    label: "Med spas",
-    title: "Consultation leads still get handled when the clinic is closed.",
+    label: "Overnight demand",
+    title: "Questions stop sitting in a cold inbox until someone remembers to check it.",
     description:
-      "Treatment questions and booking intent get captured cleanly instead of sitting in a cold inbox until morning.",
+      "Anything that lands while the team is off gets handled properly — with the right tone, the right next step, and a qualified conversation already waiting when the day starts.",
   },
   {
-    label: "Agencies and studios",
-    title: "The front desk stops becoming the emergency answer for everything.",
+    label: "Peak load",
+    title: "When the team is stretched, the front desk stops absorbing overflow it cannot handle.",
     description:
-      "Viewings, class questions, intro offers, and follow-up requests keep moving without dragging the team back into admin mode.",
+      "Scheduling questions, intro requests, follow-up chasing — the volume that would otherwise pile onto the team keeps moving cleanly, without anyone being pulled back into admin.",
   },
 ] as const;
 
 export const deploymentHighlights = [
   {
     label: "Past 6 months",
-    title: "8 small businesses live on the same framework",
-    meta: "Tourism, jewelry, boutique retail, real estate, and boutique law",
+    title: "8 live deployments. Same framework. Very different businesses.",
+    meta: "Services, retail, and professional sectors",
     summary:
-      "The mix is varied, but the pattern is consistent: enquiries arrive after hours, the owner or front desk cannot stay glued to them, and a clean first reply matters more than another piece of software.",
+      "The businesses are different. The pattern is identical: enquiries arrive after hours, the team cannot stay glued to every channel, and a clean first reply — right now, not tomorrow — is the difference between a warm lead and a dead one.",
     outcome:
-      "The gain was straightforward: cleaner first response, warmer follow-up, and less manual catch-up the next morning.",
+      "Cleaner first response, warmer follow-up, less manual catch-up. Every time.",
   },
   {
     label: "Representative rollout",
-    title: "Tourism operator with multilingual guest intake",
+    title: "Multilingual guest intake handled across three channels simultaneously.",
     meta: "Anonymous by request",
     summary:
-      "Availability questions, booking steps, pickup timing, and guest follow-up now move through one trained system across WhatsApp, web, and email instead of waiting for the morning team.",
+      "Availability questions, booking steps, pickup timing, and guest follow-up now move through one trained system across WhatsApp, web, and email — instead of waiting for whoever picks up the phone first.",
     outcome:
-      "The gain was not louder automation. It was calmer operations: guests got an answer now, staff inherited context later.",
+      "Guests got an answer now. Staff inherited full context later. Nobody chased anything.",
   },
   {
     label: "Adjacent deployments",
-    title: "Real estate intake and boutique legal screening",
+    title: "Intake, screening, and qualification — handled before the team even starts their day.",
     meta: "Private deployment",
     summary:
-      "Viewing requests, consultation screening, document questions, and next-step capture were wired into the same operating model without asking the team to learn another platform.",
+      "Enquiries, consultation screening, document questions, and next-step capture were wired into the same operating model without asking the team to learn a single new platform.",
     outcome:
-      "The common result was fewer warm enquiries sitting untouched just because the team was busy or off the clock.",
+      "Fewer warm enquiries sitting cold. Not because the team worked harder — because the system never stopped.",
   },
 ] as const;
 
 export const roiOutcomes = [
   {
-    value: "24/7",
-    label: "Coverage across evenings, weekends, and the gaps a small team cannot fill",
+    value: "11 PM",
+    label: "When your competitor's inbox closes. When Velaeva starts converting the enquiry they'll never see.",
   },
   {
-    value: "1 setup",
-    label: "One install instead of a recurring internal build project",
+    value: "5 days",
+    label: "From signed agreement to live — handling real customers, real questions, real bookings.",
   },
   {
-    value: "0 new tools",
-    label: "The team stays in familiar channels instead of learning another interface",
+    value: "Zero handholding",
+    label: "Your team works exactly as before. No new logins. No training sessions. Nothing changes for them.",
   },
   {
-    value: "Tuned monthly",
-    label: "Review, correction, and tuning stay active after launch",
+    value: "We run it",
+    label: "Monthly calibration, correction, and tuning handled by us. You check in when you want to.",
   },
 ] as const;
 
@@ -237,58 +238,36 @@ export const contrastRows = [
 export const founderStory = {
   name: "Zach Vivek",
   role: "Founder, Velaeva",
-  label: "Oracle database ops · Manhattan consulting · European brand work",
+  label: "A decade across Oracle, SaaS, and high-ticket service businesses",
   quote:
     "Every business I worked with had the same underlying problem. Strong operation during hours. Nothing after. The AI existed to solve it — but everything built to solve it sounded like a machine, soulless at exactly the moment a buyer needed to feel handled. That was the design problem worth solving.",
   body:
-    "Zach spent years inside Oracle consulting on database operations and architecture, before moving into client acquisition work with professional services firms in Manhattan. He then consulted across branding and operations for small and mid-size businesses in Europe. The pattern across all of it was consistent: strong businesses losing warm demand not because of bad service, but because the right reply came too late, from a tool that felt cold. Velaeva is the system he kept wishing existed — built on real ops depth, real data architecture, and the kind of front-desk feel that actually converts.",
+    "Zach built Velaeva after 15 years working across enterprise database operations, SaaS client acquisition in New York, and operations consulting for high-ticket service businesses across Europe. What he kept finding was the same problem in different clothes: sharp operators losing warm revenue not because of bad service — but because no one was there when the buyer was ready. Velaeva is the system he kept wishing someone else would build.",
   image: "/media/founder-portrait.jpg",
-  proofNote:
-    "References for qualified buyers are shared privately where client agreements allow.",
+  proofNote: "",
 } as const;
 
 export const howItWorksSteps = [
   {
     step: "01",
-    label: "Discovery call",
-    title: "We map the operation before touching anything.",
+    label: "We learn your business",
+    title: "Everything your team knows, the AI learns before it touches a single customer.",
     description:
-      "Where leads come in. Where they stall. How follow-up currently works. We are looking for the specific gaps — not a general AI pitch.",
+      "Where leads come in. Where they stall. What your buyers ask at 11 PM. How your business should sound. Pricing, policies, objections, edge cases — all mapped in the first phase. The build starts after, not before.",
   },
   {
     step: "02",
-    label: "Data audit",
-    title: "We work with what you already have.",
+    label: "We wire it in",
+    title: "Connected to the channels your customers already use. Nothing new for anyone to learn.",
     description:
-      "Pricing sheets, booking systems, policy docs, FAQ patterns, CRM history. The AI is trained on your actual business — not a generic template we retrofit.",
+      "WhatsApp, web chat, Gmail, your booking system, your CRM. We connect to what already exists in your operation. Your data stays in your account — we never extract or store it on our side.",
   },
   {
     step: "03",
-    label: "Platform selection",
-    title: "We go where your customers already are.",
+    label: "We run it. It gets sharper.",
+    title: "Live, monitored, and improving on every real conversation — with nothing handed back to you.",
     description:
-      "WhatsApp, Telegram, SMS, email, web chat — whichever channel your buyers are already using. No new apps for them to download or learn.",
-  },
-  {
-    step: "04",
-    label: "Training and connection",
-    title: "The AI is shaped around your tone, offers, and edge cases.",
-    description:
-      "Objection handling, negotiation ranges, brand voice, escalation logic. Your data stays in your account. We connect to run the system — we never extract or store it on our side.",
-  },
-  {
-    step: "05",
-    label: "Analytics layer",
-    title: "Performance is tracked from day one.",
-    description:
-      "Conversion rates, fallback triggers, common patterns, response quality. We see what is working, what to tune, and we act on it — without the owner touching anything.",
-  },
-  {
-    step: "06",
-    label: "Live and self-improving",
-    title: "It gets sharper the longer it runs.",
-    description:
-      "The AI refines on real conversations. APIs connected for live data — pricing, inventory, routing, availability. Precise answers at the lowest possible cost per query. Your data stays yours.",
+      "Conversion rates, fallback triggers, tone drift, common patterns — we track it all and tune monthly. The longer it runs, the better it knows your business. You stay completely out of the weeds.",
   },
 ] as const;
 
@@ -313,12 +292,12 @@ export const caseStudy = {
 
 export const industries = [
   {
-    name: "Car Dealerships",
-    pain: "Inventory, finance, and test-drive questions keep coming long after the showroom closes.",
+    name: "When your product needs a real conversation before it converts",
+    pain: "Buyers are ready to move — but the question they have at 9 PM kills the momentum by morning. Stock, specs, timelines, trade-ins. Every unanswered message is a warm lead that cools.",
     outcome:
-      "Early deployments typically book more weekend and after-hours test-drive intent without adding weekend staff.",
+      "After-hours intent gets captured and qualified. The team steps into warm conversations instead of cold restarts.",
     edgeCase:
-      "Handles awkward financing questions, negative-equity trade-ins, and buyers who want a straight answer before wasting another showroom visit.",
+      "Handles the hard questions — awkward financing, complex trade-ins, buyers who want a straight answer before they waste another trip.",
     image:
       "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?auto=format&fit=crop&w=1200&q=80",
     chatPreview: [
@@ -329,12 +308,12 @@ export const industries = [
     ],
   },
   {
-    name: "Med Spas & Aesthetic Clinics",
-    pain: "Consultation leads ask pricing, downtime, and treatment questions when your team is off.",
+    name: "When response time is the product",
+    pain: "The window between intent and decision is short. Someone asks a question at 10 PM expecting clarity — and gets a contact form. By morning, they've already booked somewhere else.",
     outcome:
-      "Clients have reported more consult intent staying warm overnight instead of cooling in a form inbox.",
+      "Consult intent stays warm overnight. The first reply already moves the conversation forward instead of stalling it.",
     edgeCase:
-      "Handles anxious questions, previous bad reactions, and treatment-fit concerns without sounding clinical, evasive, or reckless.",
+      "Handles anxious or sensitive questions with calm and care — without sounding clinical, evasive, or automated.",
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=80",
     chatPreview: [
@@ -345,12 +324,12 @@ export const industries = [
     ],
   },
   {
-    name: "Real Estate Agencies",
-    pain: "Listing questions and viewing requests land at all hours, usually when agents are already moving.",
+    name: "When availability questions kill momentum",
+    pain: "Is it still available? Can I view it this week? Listing questions land when agents are already in motion — and by the time anyone replies, the buyer's attention has moved on.",
     outcome:
-      "Agents step into warmer conversations because viewings, timing, and buyer intent have already been qualified.",
+      "Viewings, timing, and buyer intent get qualified before the agent is even involved. They step in already informed.",
     edgeCase:
-      "Handles outbid fatigue, 'offers over' skepticism, and area-fit questions without pretending every lead should book a viewing.",
+      "Handles skeptical buyers, area-fit questions, and timeline pressure without overpromising or losing the thread.",
     image:
       "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1200&q=80",
     chatPreview: [
@@ -361,12 +340,12 @@ export const industries = [
     ],
   },
   {
-    name: "Boutique Fitness Studios",
-    pain: "Intro-offer questions, schedules, and membership follow-up can eat the front desk alive.",
+    name: "When the front desk is doing the work of three people",
+    pain: "Schedules, pricing, memberships, intro offers, injury questions — the volume is relentless. One person cannot absorb it all and still give anyone a proper answer.",
     outcome:
-      "Studios typically see fewer intro enquiries drift after office hours and fewer repetitive front-desk interruptions.",
+      "Repetitive front-desk volume drops. Staff focus on the room, not the inbox. Intro enquiries stop drifting after hours.",
     edgeCase:
-      "Handles injury history, membership freezes, and nervous-first-class questions with the kind of calm a human coach would use.",
+      "Handles nervous first-timers, injury history, and membership edge cases with the calm a human coach would use — not a FAQ page.",
     image:
       "https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1200&q=80",
     chatPreview: [
@@ -412,7 +391,17 @@ export const pricingClarifications = [
 
 export const faqItems = [
   {
-    question: "What does “tuned monthly” actually include?",
+    question: "What actually happens on the free 20-minute call?",
+    answer:
+      "We map your current enquiry flow — where leads come in, where they stall, what your buyers typically ask after hours. By the end, you will know exactly what the gap is costing you, whether Velaeva is the right fit, and what a rollout would look like for your specific operation. No pitch deck. No pressure. If it is not right for your business, we will say so in the call.",
+  },
+  {
+    question: "Do I need to be technical to work with Velaeva?",
+    answer:
+      "No. You do not touch the setup, the integrations, or the ongoing tuning. We handle all of it. The only thing we need from you is access to the tools your business already uses and time to understand how your business works. Everything after that is on us.",
+  },
+  {
+    question: "What does 'tuned monthly' actually include?",
     answer:
       "A live conversation review, prompt and policy updates, routing adjustments, handoff fixes, and small offer or copy changes. The goal is to keep the concierge sharp as real conversations expose new edge cases.",
   },
@@ -537,7 +526,7 @@ export const demoScenarios: DemoScenario[] = [
     tagline: "Inventory, finance questions, and test-drive requests",
     assistantName: "Atlas",
     intro:
-      "Hi, I’m Atlas — the concierge for this dealership. I can help with inventory, trade-ins, financing, test drives, and general questions. What can I help you with?",
+      "Hi, I'm Atlas — the concierge for this dealership. I can help with inventory, trade-ins, financing, test drives, and general questions. What can I help you with?",
     systemPrompt:
       "You are Atlas, a high-performing dealership concierge for Velaeva. Sound calm, commercially sharp, and human. Answer like someone who works the front desk for a premium dealership. Be helpful, witty only when it genuinely fits, and never sound like a generic AI assistant. Handle bizarre or skeptical questions with intelligence and restraint. Be honest about not having live inventory or pricing when you do not. Move toward a useful next step whenever appropriate.",
     quickPrompts: [
@@ -550,17 +539,17 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["suv", "suv?", "crossover", "4x4", "truck", "van", "inventory", "available", "models", "vehicles", "cars", "stock", "what do you have", "in stock"],
         response:
-          "Yes, we have SUVs and crossovers in stock across several trim levels and colour options. To give you the most accurate availability, I can note your preferred budget, fuel type, and ideal handover date so the team has everything ready when they follow up. What are the key things you’re looking for?",
+          "Yes, we have SUVs and crossovers in stock across several trim levels and colour options. To give you the most accurate availability, I can note your preferred budget, fuel type, and ideal handover date so the team has everything ready when they follow up. What are the key things you're looking for?",
       },
       {
         keywords: ["test drive", "test-drive", "testdrive", "drive it", "try it", "book", "schedule", "saturday", "sunday", "tomorrow", "this week", "appointment", "visit", "come in"],
         response:
-          "Absolutely — we can get that arranged. I’ll need the model you’re interested in, your preferred day and rough time, and the best number for the team to confirm. Which model are you thinking about?",
+          "Absolutely — we can get that arranged. I'll need the model you're interested in, your preferred day and rough time, and the best number for the team to confirm. Which model are you thinking about?",
       },
       {
         keywords: ["finance", "financing", "loan", "documents", "paperwork", "credit", "monthly payment", "down payment", "deposit", "apr", "interest rate", "lease", "leasing"],
         response:
-          "For financing, you’d typically need a valid ID, proof of income (recent pay stubs or bank statements), proof of address, and your insurance details. The finance manager walks you through the rest at the dealership. I can set up a finance conversation now if you’d like to get pre-qualified — what’s your approximate budget range?",
+          "For financing, you'd typically need a valid ID, proof of income (recent pay stubs or bank statements), proof of address, and your insurance details. The finance manager walks you through the rest at the dealership. I can set up a finance conversation now if you'd like to get pre-qualified — what's your approximate budget range?",
       },
       {
         keywords: ["trade", "trade-in", "trade in", "my car", "sell my", "part exchange", "exchange"],
@@ -570,17 +559,17 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["price", "cost", "how much", "pricing", "expensive", "cheap", "value", "worth", "msrp"],
         response:
-          "Pricing depends on the specific model, trim, and any current promotions. I don’t have live pricing here, but I can flag your interest and have the sales team send over exact figures — usually within a few hours. Which model are you looking at?",
+          "Pricing depends on the specific model, trim, and any current promotions. I don't have live pricing here, but I can flag your interest and have the sales team send over exact figures — usually within a few hours. Which model are you looking at?",
       },
       {
         keywords: ["hours", "open", "closing time", "when are you", "what time", "weekend"],
         response:
-          "The showroom is typically open Monday to Saturday. For exact hours today, I’d recommend calling the front desk directly — I can also leave a note for the team to confirm when they follow up with you.",
+          "The showroom is typically open Monday to Saturday. For exact hours today, I'd recommend calling the front desk directly — I can also leave a note for the team to confirm when they follow up with you.",
       },
       {
         keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening", "howdy"],
         response:
-          "Hi there! I’m Atlas, the dealership concierge. I’m here around the clock to help with inventory questions, test drives, financing, or anything else you need. What’s on your mind?",
+          "Hi there! I'm Atlas, the dealership concierge. I'm here around the clock to help with inventory questions, test drives, financing, or anything else you need. What's on your mind?",
       },
       {
         keywords: ["negative equity", "rejected", "rejection", "turned down", "denied", "bad credit", "any point", "bankruptcy", "previously refused"],
@@ -597,7 +586,7 @@ export const demoScenarios: DemoScenario[] = [
     tagline: "Consultation inquiries, treatment questions, and bookings",
     assistantName: "Sienna",
     intro:
-      "Hi, I’m Sienna — the concierge for this clinic. I can help with treatment questions, consultation availability, pricing guidance, and next steps for booking. What brings you in today?",
+      "Hi, I'm Sienna — the concierge for this clinic. I can help with treatment questions, consultation availability, pricing guidance, and next steps for booking. What brings you in today?",
     systemPrompt:
       "You are Sienna, a premium med spa concierge for Velaeva. Sound poised, warm, clinically careful, and commercially intelligent. Never overclaim medical facts. Encourage consultations where appropriate, handle anxious questions with reassurance and clarity, and keep replies human rather than robotic.",
     quickPrompts: [
@@ -615,7 +604,7 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["laser", "ipl", "skin", "rejuvenation", "pigmentation", "texture", "pores", "brightening", "glow", "treatment", "services", "what do you offer", "what treatments"],
         response:
-          "Yes — we offer a range of laser and skin treatments including laser resurfacing, IPL for pigmentation and redness, micro-needling, and targeted skin rejuvenation. The right treatment depends on your skin concern and goals. I can note what you’re looking to address and have a practitioner outline the best options before your consultation.",
+          "Yes — we offer a range of laser and skin treatments including laser resurfacing, IPL for pigmentation and redness, micro-needling, and targeted skin rejuvenation. The right treatment depends on your skin concern and goals. I can note what you're looking to address and have a practitioner outline the best options before your consultation.",
       },
       {
         keywords: ["botox", "filler", "lip", "lips", "jawline", "cheek", "wrinkle", "anti-aging", "anti aging", "injectables", "injections"],
@@ -625,7 +614,7 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["after", "downtime", "recovery", "expect", "side effects", "bruising", "swelling", "redness", "healed", "how long"],
         response:
-          "Downtime varies by treatment. Most laser and skin treatments involve mild redness for 24–48 hours. Injectables typically have little to no downtime, though minor bruising is possible. The practitioner will give you a full aftercare plan before and after the procedure. Is there a specific treatment you’d like to know more about?",
+          "Downtime varies by treatment. Most laser and skin treatments involve mild redness for 24–48 hours. Injectables typically have little to no downtime, though minor bruising is possible. The practitioner will give you a full aftercare plan before and after the procedure. Is there a specific treatment you'd like to know more about?",
       },
       {
         keywords: ["price", "cost", "pricing", "how much", "expensive", "cheap", "packages", "deals", "discount"],
@@ -635,7 +624,7 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
         response:
-          "Hi! I’m Sienna, the clinic’s concierge. Whether you have treatment questions, want to know about availability, or are ready to book a consultation, I’m here to help. What can I do for you?",
+          "Hi! I'm Sienna, the clinic's concierge. Whether you have treatment questions, want to know about availability, or are ready to book a consultation, I'm here to help. What can I do for you?",
       },
       {
         keywords: ["bad reaction", "reaction", "swelling", "complication", "went wrong", "bad experience", "previous clinic", "scared", "nervous", "allergic"],
@@ -652,7 +641,7 @@ export const demoScenarios: DemoScenario[] = [
     tagline: "Viewings, listing questions, and early buyer qualification",
     assistantName: "Cove",
     intro:
-      "Hi, I’m Cove — the agency concierge. I can help with listing questions, viewing availability, area guidance, and connecting you with the right agent. What are you looking for?",
+      "Hi, I'm Cove — the agency concierge. I can help with listing questions, viewing availability, area guidance, and connecting you with the right agent. What are you looking for?",
     systemPrompt:
       "You are Cove, a polished real estate concierge for Velaeva. Sound like a high-end agency operator: informed, direct, calm, and never pushy. Handle skeptical property questions with good judgment. You can guide, qualify, and suggest next steps, but do not invent listing facts.",
     quickPrompts: [
@@ -665,22 +654,22 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["viewing", "view", "schedule", "appointment", "tour", "walk through", "see the property", "visit", "this week", "tomorrow", "weekend"],
         response:
-          "Yes — I can arrange that. To confirm availability, I’ll need the property address or listing reference, your preferred day and time, and a contact number. The agent will confirm within a few hours. Which property are you interested in?",
+          "Yes — I can arrange that. To confirm availability, I'll need the property address or listing reference, your preferred day and time, and a contact number. The agent will confirm within a few hours. Which property are you interested in?",
       },
       {
         keywords: ["available", "still available", "on the market", "sold", "listing", "property", "is it still", "taken"],
         response:
-          "I can check on that for you. If you share the address or listing number, I’ll flag it with the agent and they’ll confirm the status — usually very quickly. If it’s under offer, they can also suggest similar alternatives.",
+          "I can check on that for you. If you share the address or listing number, I'll flag it with the agent and they'll confirm the status — usually very quickly. If it's under offer, they can also suggest similar alternatives.",
       },
       {
         keywords: ["area", "family", "families", "school", "schools", "neighborhood", "neighbourhood", "location", "transport", "commute", "safe", "good area"],
         response:
-          "That’s a great question to get right early. I can share a general overview of the area, but for specific school ratings, commute times, and safety data, the agent can pull together a neighbourhood report for you. Which area are you considering?",
+          "That's a great question to get right early. I can share a general overview of the area, but for specific school ratings, commute times, and safety data, the agent can pull together a neighbourhood report for you. Which area are you considering?",
       },
       {
         keywords: ["price", "how much", "cost", "budget", "afford", "mortgage", "offer", "negotiate", "asking price", "valuation"],
         response:
-          "I can pass your budget range to the agent so they shortlist properties that actually fit rather than wasting your time. The agent can also advise on realistic offer levels in the current market. What’s your approximate budget?",
+          "I can pass your budget range to the agent so they shortlist properties that actually fit rather than wasting your time. The agent can also advise on realistic offer levels in the current market. What's your approximate budget?",
       },
       {
         keywords: ["rent", "rental", "tenant", "landlord", "lease", "renting"],
@@ -690,7 +679,7 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
         response:
-          "Hi! I’m Cove, the agency’s concierge. I’m here to help with property questions, viewing bookings, area guidance, or anything else before you speak with an agent. What can I help with?",
+          "Hi! I'm Cove, the agency's concierge. I'm here to help with property questions, viewing bookings, area guidance, or anything else before you speak with an agent. What can I help with?",
       },
       {
         keywords: ["outbid", "offers over", "worth my time", "competitive", "gazumped", "lost out", "missed out", "keep losing", "frustrated", "realistic", "beaten"],
@@ -707,7 +696,7 @@ export const demoScenarios: DemoScenario[] = [
     tagline: "Intro offers, class schedules, and membership follow-up",
     assistantName: "Mara",
     intro:
-      "Hi, I’m Mara — the studio concierge. I can help with class schedules, intro offers, membership options, and booking your first session. What brings you here today?",
+      "Hi, I'm Mara — the studio concierge. I can help with class schedules, intro offers, membership options, and booking your first session. What brings you here today?",
     systemPrompt:
       "You are Mara, a boutique fitness concierge for Velaeva. Sound energetic but composed, not cheesy. Be encouraging, practical, and safety-aware. Handle difficult questions with empathy and confidence, and guide the person toward the right class, coach, or next step.",
     quickPrompts: [
@@ -720,12 +709,12 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["intro", "introduction", "offer", "trial", "first time", "new", "join", "try it", "sign up", "discount", "deal", "promo"],
         response:
-          "Yes — we have an intro offer for new members that lets you try a set of classes at a reduced rate before committing to a membership. I can capture your details and have the front desk send over the exact terms and how to claim it. What’s the best way to reach you?",
+          "Yes — we have an intro offer for new members that lets you try a set of classes at a reduced rate before committing to a membership. I can capture your details and have the front desk send over the exact terms and how to claim it. What's the best way to reach you?",
       },
       {
         keywords: ["beginner", "beginners", "new to", "never done", "start", "starting", "first class", "easy", "suitable", "right for me"],
         response:
-          "For beginners, we usually recommend starting with our foundational or low-impact sessions — they’re designed to build form and confidence before jumping into higher-intensity formats. I can note your fitness background and goals so the coach can suggest the best starting point for you.",
+          "For beginners, we usually recommend starting with our foundational or low-impact sessions — they're designed to build form and confidence before jumping into higher-intensity formats. I can note your fitness background and goals so the coach can suggest the best starting point for you.",
       },
       {
         keywords: ["classes", "schedule", "timetable", "when", "what time", "morning", "evening", "weekend", "class times"],
@@ -735,17 +724,17 @@ export const demoScenarios: DemoScenario[] = [
       {
         keywords: ["freeze", "pause", "hold", "cancel", "membership", "suspend", "holiday", "travelling", "pause my"],
         response:
-          "Yes, you can freeze or pause your membership. The terms depend on your plan — most allow a freeze of up to 30 days per year. I can pass your request to the team and they’ll confirm the process and any notice required.",
+          "Yes, you can freeze or pause your membership. The terms depend on your plan — most allow a freeze of up to 30 days per year. I can pass your request to the team and they'll confirm the process and any notice required.",
       },
       {
         keywords: ["price", "pricing", "how much", "cost", "monthly", "membership fee", "expensive", "plans", "options"],
         response:
-          "We have a few membership tiers depending on how many classes you want per week. Prices typically range from a drop-in rate to monthly unlimited passes. I can have the team send you a current pricing breakdown — it’s the clearest way to compare. What format suits you best?",
+          "We have a few membership tiers depending on how many classes you want per week. Prices typically range from a drop-in rate to monthly unlimited passes. I can have the team send you a current pricing breakdown — it's the clearest way to compare. What format suits you best?",
       },
       {
         keywords: ["hello", "hi", "hey", "good morning", "good afternoon", "good evening"],
         response:
-          "Hey! I’m Mara, the studio’s concierge. Whether you’re brand new or a returning member with questions, I’m here to help. What can I do for you?",
+          "Hey! I'm Mara, the studio's concierge. Whether you're brand new or a returning member with questions, I'm here to help. What can I do for you?",
       },
       {
         keywords: ["herniated", "disc", "back injury", "back problem", "spine", "physio", "physiotherapist", "scared", "aggravate", "chronic pain", "lower back", "injury", "cleared"],

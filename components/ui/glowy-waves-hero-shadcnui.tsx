@@ -2,7 +2,6 @@
 
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useEffect, useRef } from "react";
 
 import {
   CALENDLY_URL,
@@ -10,32 +9,12 @@ import {
 } from "@/components/constants/site-content";
 import { Button } from "@/components/ui/button";
 
-type Point = {
-  x: number;
-  y: number;
-};
-
-interface WaveConfig {
-  offset: number;
-  amplitude: number;
-  frequency: number;
-  color: string;
-  opacity: number;
-}
-
-const heroSignals = [
-  "Car dealerships",
-  "Med spas",
-  "Real estate agencies",
-  "Boutique fitness studios",
-] as const;
-
 const containerVariants: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.8, staggerChildren: 0.12 },
+    transition: { duration: 0.9, staggerChildren: 0.13 },
   },
 };
 
@@ -44,246 +23,61 @@ const itemVariants: Variants = {
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.6, ease: "easeOut" },
+    transition: { duration: 0.7, ease: "easeOut" },
   },
 };
 
 export function GlowyWavesHero() {
-  const canvasRef = useRef<HTMLCanvasElement | null>(null);
-  const mouseRef = useRef<Point>({ x: 0, y: 0 });
-  const targetMouseRef = useRef<Point>({ x: 0, y: 0 });
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    if (!canvas) return undefined;
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return undefined;
-
-    let animationId = 0;
-    let time = 0;
-
-    const computeThemeColors = () => {
-      const rootStyles = getComputedStyle(document.documentElement);
-
-      const resolveColor = (variables: string[], alpha = 1) => {
-        const tempEl = document.createElement("div");
-        tempEl.style.position = "absolute";
-        tempEl.style.visibility = "hidden";
-        tempEl.style.width = "1px";
-        tempEl.style.height = "1px";
-        document.body.appendChild(tempEl);
-
-        let color = `rgba(255, 255, 255, ${alpha})`;
-
-        for (const variable of variables) {
-          const value = rootStyles.getPropertyValue(variable).trim();
-          if (value) {
-            tempEl.style.backgroundColor = `var(${variable})`;
-            const computedColor = getComputedStyle(tempEl).backgroundColor;
-
-            if (computedColor && computedColor !== "rgba(0, 0, 0, 0)") {
-              if (alpha < 1) {
-                const rgbMatch = computedColor.match(
-                  /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/
-                );
-                if (rgbMatch) {
-                  color = `rgba(${rgbMatch[1]}, ${rgbMatch[2]}, ${rgbMatch[3]}, ${alpha})`;
-                } else {
-                  color = computedColor;
-                }
-              } else {
-                color = computedColor;
-              }
-              break;
-            }
-          }
-        }
-
-        document.body.removeChild(tempEl);
-        return color;
-      };
-
-      return {
-        wavePalette: [
-          {
-            offset: 0,
-            amplitude: 38,
-            frequency: 0.0028,
-            color: resolveColor(["--primary"], 0.36),
-            opacity: 0.22,
-          },
-          {
-            offset: Math.PI / 2,
-            amplitude: 55,
-            frequency: 0.0022,
-            color: resolveColor(["--secondary"], 0.22),
-            opacity: 0.17,
-          },
-          {
-            offset: Math.PI,
-            amplitude: 30,
-            frequency: 0.0033,
-            color: resolveColor(["--accent"], 0.42),
-            opacity: 0.14,
-          },
-        ] satisfies WaveConfig[],
-      };
-    };
-
-    let themeColors = computeThemeColors();
-
-    const observer = new MutationObserver(() => {
-      themeColors = computeThemeColors();
-    });
-
-    observer.observe(document.documentElement, {
-      attributes: true,
-      attributeFilter: ["class", "data-theme"],
-    });
-
-    const prefersReducedMotion = window.matchMedia(
-      "(prefers-reduced-motion: reduce)"
-    ).matches;
-
-    const mouseInfluence = prefersReducedMotion ? 6 : 28;
-    const influenceRadius = prefersReducedMotion ? 180 : 340;
-    const smoothing = prefersReducedMotion ? 0.04 : 0.075;
-
-    const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = Math.max(window.innerHeight, 980);
-    };
-
-    const recenterMouse = () => {
-      const centerPoint = { x: canvas.width / 2, y: canvas.height / 2 };
-      mouseRef.current = centerPoint;
-      targetMouseRef.current = centerPoint;
-    };
-
-    const handleResize = () => {
-      resizeCanvas();
-      recenterMouse();
-    };
-
-    const handleMouseMove = (event: MouseEvent) => {
-      targetMouseRef.current = { x: event.clientX, y: event.clientY };
-    };
-
-    const handleMouseLeave = () => {
-      recenterMouse();
-    };
-
-    resizeCanvas();
-    recenterMouse();
-
-    window.addEventListener("resize", handleResize);
-    window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseleave", handleMouseLeave);
-
-    const drawWave = (wave: WaveConfig) => {
-      ctx.save();
-      ctx.beginPath();
-
-      for (let x = 0; x <= canvas.width; x += 5) {
-        const dx = x - mouseRef.current.x;
-        const dy = canvas.height / 2 - mouseRef.current.y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        const influence = Math.max(0, 1 - distance / influenceRadius);
-        const mouseEffect =
-          influence *
-          mouseInfluence *
-          Math.sin(time * 0.001 + x * 0.01 + wave.offset);
-
-        const y =
-          canvas.height * 0.54 +
-          Math.sin(x * wave.frequency + time * 0.0016 + wave.offset) *
-            wave.amplitude +
-          Math.sin(x * wave.frequency * 0.45 + time * 0.0021) *
-            (wave.amplitude * 0.38) +
-          mouseEffect;
-
-        if (x === 0) {
-          ctx.moveTo(x, y);
-        } else {
-          ctx.lineTo(x, y);
-        }
-      }
-
-      ctx.lineWidth = 1.35;
-      ctx.strokeStyle = wave.color;
-      ctx.globalAlpha = wave.opacity;
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = wave.color;
-      ctx.stroke();
-
-      ctx.restore();
-    };
-
-    const animate = () => {
-      time += 1;
-
-      mouseRef.current.x +=
-        (targetMouseRef.current.x - mouseRef.current.x) * smoothing;
-      mouseRef.current.y +=
-        (targetMouseRef.current.y - mouseRef.current.y) * smoothing;
-
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-      ctx.globalAlpha = 1;
-      ctx.shadowBlur = 0;
-
-      themeColors.wavePalette.forEach(drawWave);
-
-      animationId = window.requestAnimationFrame(animate);
-    };
-
-    animationId = window.requestAnimationFrame(animate);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseleave", handleMouseLeave);
-      cancelAnimationFrame(animationId);
-      observer.disconnect();
-    };
-  }, []);
-
   return (
     <section
-      className="relative isolate overflow-hidden bg-background"
+      className="relative isolate min-h-screen overflow-hidden"
       role="region"
       aria-label="Velaeva hero section"
     >
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,#f8f3eb_0%,#f4efe6_52%,#eef3fb_100%)]" />
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-[24rem] bg-[radial-gradient(circle_at_top,rgba(198,216,245,0.34),rgba(198,216,245,0))]" />
-      <div className="pointer-events-none absolute left-[6%] top-[14%] h-44 w-44 rounded-full bg-[#e9eff8] blur-[92px]" />
-      <div className="pointer-events-none absolute bottom-[10%] right-[9%] h-56 w-56 rounded-full bg-[#d8e5f8]/52 blur-[112px]" />
-
-      <canvas
-        ref={canvasRef}
-        className="absolute inset-0 h-full w-full"
+      {/* ── Full-bleed video background ── */}
+      <video
+        className="absolute inset-0 h-full w-full object-cover object-[center_35%]"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+        disablePictureInPicture
+        disableRemotePlayback
         aria-hidden="true"
+      >
+        <source src="/media/hero-mountain.mp4" type="video/mp4" />
+      </video>
+
+      {/* ── Veil — barely-there, lets the mountain breathe ── */}
+      <div
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(255,255,255,0.18) 0%, rgba(255,255,255,0.08) 55%, rgba(10,18,32,0.22) 100%)",
+        }}
       />
 
-      <div className="relative mx-auto max-w-7xl px-6 pb-14 pt-28 md:px-8 md:pb-24 md:pt-36">
+      {/* ── Content ── */}
+      <div className="relative mx-auto max-w-7xl px-6 pb-0 pt-28 md:px-8 md:pt-36">
         <motion.div
           variants={containerVariants}
           initial={false}
           animate="visible"
           className="grid gap-10 lg:grid-cols-[1.04fr_0.96fr] lg:items-center lg:gap-14"
         >
+          {/* Left — headline + CTA */}
           <div>
             <motion.div
               variants={itemVariants}
-              className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-[#355884]/58"
+              className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.32em] text-white/64"
             >
-              Hands-off AI concierge for high-ticket businesses
+              Done-for-you AI concierge · live in 5 days
             </motion.div>
 
             <motion.h1
               variants={itemVariants}
-              className="mt-6 max-w-4xl font-heading text-5xl font-semibold leading-[0.96] tracking-[-0.055em] text-foreground md:text-7xl lg:text-[5.7rem]"
+              className="mt-6 max-w-4xl font-heading text-5xl font-semibold leading-[0.96] tracking-[-0.055em] text-white drop-shadow-sm md:text-7xl lg:text-[5.7rem]"
             >
               Stop handling customers.
               <br />
@@ -292,11 +86,11 @@ export function GlowyWavesHero() {
 
             <motion.p
               variants={itemVariants}
-              className="mt-8 max-w-2xl text-lg leading-8 text-foreground/78 md:text-xl"
+              className="mt-8 max-w-xl text-lg leading-8 text-white/80 md:text-xl"
             >
-              Late-night leads, repetitive questions, and weekend follow-up
-              stop rolling back to the owner. Velaeva keeps the first reply
-              clear, composed, and moving while the team is off the clock.
+              Every enquiry that lands after hours — the one your team won&apos;t
+              see until tomorrow — gets a clear, calm, on-brand reply right now.
+              No scripts. No bots. A concierge that actually sounds like you.
             </motion.p>
 
             <motion.div
@@ -309,73 +103,72 @@ export function GlowyWavesHero() {
                   <ArrowRight className="h-4 w-4" />
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="px-7">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="border-white/30 bg-white/10 px-7 text-white backdrop-blur-sm hover:bg-white/20 hover:text-white"
+              >
                 <a href="#demo">See It In Action</a>
               </Button>
             </motion.div>
 
             <motion.p
               variants={itemVariants}
-              className="mt-4 text-sm leading-7 text-foreground/58"
+              className="mt-4 text-sm leading-7 text-white/48"
             >
-              No commitment. We&apos;ll tell you honestly if it&apos;s a fit.
+              Free call. We&apos;ll tell you honestly if it&apos;s the right fit before anything starts.
             </motion.p>
-
-            <motion.ul
-              variants={itemVariants}
-              className="mt-10 flex flex-wrap gap-x-6 gap-y-3 text-sm text-foreground/62"
-            >
-              {heroSignals.map((signal) => (
-                <li key={signal} className="flex items-center gap-3">
-                  <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                  {signal}
-                </li>
-              ))}
-            </motion.ul>
           </div>
 
+          {/* Right — glass chat card */}
           <motion.div variants={itemVariants} className="relative lg:justify-self-end">
-            <div className="glass-surface relative max-w-[34rem] rounded-[1.5rem] p-6 md:p-8">
-              <div className="flex items-center justify-between font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/48">
-                <span>Live lead capture</span>
+            <div
+              className="relative max-w-[34rem] rounded-[1.5rem] p-6 md:p-8"
+              style={{
+                background:
+                  "linear-gradient(160deg, rgba(255,255,255,0.62) 0%, rgba(255,255,255,0.38) 100%)",
+                border: "1px solid rgba(255,255,255,0.55)",
+                boxShadow:
+                  "0 16px 48px rgba(10,18,32,0.18), inset 0 1px 0 rgba(255,255,255,0.9)",
+                backdropFilter: "blur(24px) saturate(1.1)",
+                WebkitBackdropFilter: "blur(24px) saturate(1.1)",
+              }}
+            >
+              <div className="flex items-center justify-between font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/60">
+                <span>Incoming — after hours</span>
                 <span>11:18 PM</span>
               </div>
 
-              <h2 className="mt-6 max-w-md font-heading text-3xl font-semibold leading-[1.04] tracking-[-0.045em] text-foreground">
-                The buyer gets a clear answer now.
-                <br />
-                Your team gets the context in the morning.
+              <h2 className="mt-6 max-w-md font-heading text-2xl font-semibold leading-[1.1] tracking-[-0.04em] text-foreground">
+                While you slept, the lead was qualified,
+                the question was answered, the slot was held.
               </h2>
 
-              <div className="mt-8 space-y-4">
-                <div className="max-w-[82%] rounded-[1.2rem] bg-[#ebf1fa] px-5 py-4 text-sm leading-7 text-foreground/78">
-                  Do you still have the blue SUV in stock, and can I book a test
-                  drive for tomorrow afternoon?
+              <div className="mt-6 space-y-4">
+                <div className="max-w-[82%] rounded-[1.2rem] bg-[#ebf1fa]/80 px-5 py-4 text-sm leading-7 text-foreground/78 backdrop-blur-sm">
+                  Do you still have the blue SUV? Can I book a test drive for tomorrow afternoon?
                 </div>
                 <div className="ml-auto max-w-[88%] rounded-[1.2rem] bg-secondary px-5 py-4 text-sm leading-7 text-secondary-foreground">
-                  Yes, the blue model is available. I can prepare a test-drive
-                  request for tomorrow afternoon and collect the best contact
-                  number so the team confirms it first thing.
+                  Yes — it&apos;s available. I&apos;ve held a slot for tomorrow at 3 PM and sent you a confirmation. The team will have your full context ready when they&apos;re in.
                 </div>
               </div>
 
-              <div className="mt-8 grid gap-5 border-t border-[#123b6b]/10 pt-6 sm:grid-cols-2">
+              <div className="mt-6 grid gap-5 border-t border-[#123b6b]/10 pt-6 sm:grid-cols-2">
                 <div>
-                  <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/48">
-                    Trained on
+                  <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/52">
+                    What it knows
                   </div>
                   <p className="mt-3 text-sm leading-7 text-foreground/64">
-                    Inventory, policies, offers, schedules, objections, and the
-                    tone your business should use.
+                    Your inventory, tone, policies, pricing, and every edge case your team handles daily.
                   </p>
                 </div>
                 <div>
-                  <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/48">
-                    Outcome
+                  <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/52">
+                    What you get
                   </div>
                   <p className="mt-3 text-sm leading-7 text-foreground/64">
-                    Leads stay warm, repetitive questions drop off, and the
-                    owner is no longer the emergency support plan.
+                    A warm lead in the morning instead of a cold one. Every time. Without lifting a finger.
                   </p>
                 </div>
               </div>
@@ -383,29 +176,43 @@ export function GlowyWavesHero() {
           </motion.div>
         </motion.div>
 
+        {/* ── Trust bar — frosted strip at the bottom of the hero ── */}
         <motion.div
           variants={itemVariants}
           initial={false}
           animate="visible"
-          className="mt-12 grid gap-6 border-y border-[#123b6b]/10 py-7 md:mt-14 md:grid-cols-3"
+          className="mt-12 md:mt-14"
         >
-          {trustBarItems.map((item) => (
-            <div key={item.label} className="flex items-start gap-4">
-              <div className="mt-3 h-2.5 w-2.5 rounded-full bg-primary/80 shadow-[0_0_0_6px_rgba(43,92,163,0.08)]" />
-              <div>
-                <div className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-[#355884]/48">
-                  {item.label}
+          <div
+            className="grid gap-6 rounded-2xl px-7 py-7 md:grid-cols-3"
+            style={{
+              background: "rgba(255,255,255,0.28)",
+              border: "1px solid rgba(255,255,255,0.40)",
+              backdropFilter: "blur(20px) saturate(1.08)",
+              WebkitBackdropFilter: "blur(20px) saturate(1.08)",
+            }}
+          >
+            {trustBarItems.map((item) => (
+              <div key={item.label} className="flex items-start gap-4">
+                <div className="mt-3 h-2.5 w-2.5 shrink-0 rounded-full bg-white/80 shadow-[0_0_0_6px_rgba(255,255,255,0.16)]" />
+                <div>
+                  <div className="font-mono text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-white/60">
+                    {item.label}
+                  </div>
+                  <div className="mt-2 font-heading text-3xl font-semibold tracking-[-0.05em] text-white">
+                    {item.value}
+                  </div>
+                  <p className="mt-2 max-w-xs text-sm leading-7 text-white/64">
+                    {item.description}
+                  </p>
                 </div>
-                <div className="mt-2 font-heading text-3xl font-semibold tracking-[-0.05em] text-foreground">
-                  {item.value}
-                </div>
-                <p className="mt-2 max-w-xs text-sm leading-7 text-foreground/58">
-                  {item.description}
-                </p>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </motion.div>
+
+        {/* Bottom padding so trust bar clears the fold */}
+        <div className="h-14 md:h-20" />
       </div>
     </section>
   );
