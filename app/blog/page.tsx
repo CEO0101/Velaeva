@@ -160,8 +160,7 @@ export default function BlogPage() {
             </Button>
           </div>
           <p className="mt-4 text-sm leading-7 text-foreground/52">
-            No commitment. If it's not the right fit, we'll say so in the first
-            call.
+            Most operators who take this call leave wishing they had done it three months earlier. Twenty minutes.
           </p>
         </div>
       </main>

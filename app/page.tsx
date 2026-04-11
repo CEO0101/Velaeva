@@ -52,34 +52,43 @@ export default function Home() {
   const structuredData = [
     {
       "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: "Velaeva",
+      url: "https://www.velaeva.com",
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Organization",
-      name: "Velaeva.com",
-      url: "https://velaeva.com",
+      name: "Velaeva",
+      url: "https://www.velaeva.com",
+      logo: "https://www.velaeva.com/icon.svg",
       email: "hello@velaeva.com",
       description:
-        "Velaeva installs done-for-you AI concierge systems for high-intent businesses that need faster replies, warmer leads, and less front-desk drag.",
+        "Velaeva installs done-for-you AI concierge systems for high-intent service businesses that want faster replies, warmer leads, and less front-desk drag — without hiring.",
       founder: {
         "@type": "Person",
         name: founderStory.name,
         jobTitle: founderStory.role,
+        url: "https://www.velaeva.com/#founder",
       },
     },
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Velaeva.com Concierge",
+      name: "Velaeva AI Concierge",
       serviceType: "Done-for-you AI concierge deployment",
       provider: {
         "@type": "Organization",
-        name: "Velaeva.com",
+        name: "Velaeva",
+        url: "https://www.velaeva.com",
       },
       areaServed: ["United States", "United Kingdom", "Europe"],
       audience: {
         "@type": "Audience",
-        audienceType: "Founders and business owners",
+        audienceType: "Founders and owners of high-ticket service businesses",
       },
       description:
-        "A hands-off AI concierge for car dealerships, med spas, real estate agencies, boutique fitness studios, and adjacent high-intent service businesses.",
+        "A done-for-you AI concierge that handles after-hours enquiries, captures leads, and follows up — trained on how your business talks and maintained monthly so it stays sharp.",
     },
     {
       "@context": "https://schema.org",
@@ -785,9 +794,8 @@ export default function Home() {
               </Button>
             </div>
 
-            <p className="mt-4 text-sm leading-7 text-white/44">
-              No commitment. If it is wrong for your business, we will say so in
-              the first call.
+            <p className="mt-4 text-sm leading-7 text-white/52">
+              Tonight another enquiry will hit after hours. It will sit there until morning. Twenty minutes on this call is the last time you will have to think about that.
             </p>
           </FadeIn>
         </section>

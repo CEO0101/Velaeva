@@ -4,8 +4,8 @@ import { SmoothScroll } from "@/components/site/smooth-scroll";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://velaeva.com"),
-  title: "Velaeva.com | Hands-Off AI Concierge For High-Ticket Businesses",
+  metadataBase: new URL("https://www.velaeva.com"),
+  title: "Velaeva | Hands-Off AI Concierge For High-Ticket Businesses",
   description:
     "Velaeva installs hands-off AI concierge systems for high-intent businesses that want faster replies, warmer leads, and less front-desk drag.",
   keywords: [

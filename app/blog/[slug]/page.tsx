@@ -192,7 +192,7 @@ export default async function ArticlePage({ params }: Props) {
             </Button>
           </div>
           <p className="mt-4 text-sm leading-7 text-foreground/52">
-            No commitment. No pitch. Just the numbers for your business.
+            You have just read what it costs. Twenty minutes to find out exactly what it is costing yours.
           </p>
         </div>
 
