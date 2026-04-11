@@ -1,12 +1,12 @@
 export const CALENDLY_URL = "https://calendly.com/peace-me-practice/discover-call-33-minutes";
 
 export const navigationLinks = [
-  { label: "How It Works", href: "#process" },
-  { label: "Demo", href: "#demo" },
-  { label: "Difference", href: "#comparison" },
-  { label: "Who It's For", href: "#industries" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "Founder", href: "#founder" },
+  { label: "How It Works", href: "/#process" },
+  { label: "Demo", href: "/#demo" },
+  { label: "Difference", href: "/#comparison" },
+  { label: "Who It's For", href: "/#industries" },
+  { label: "Pricing", href: "/#pricing" },
+  { label: "Founder", href: "/#founder" },
   { label: "Blog", href: "/blog" },
 ] as const;
 
@@ -242,7 +242,7 @@ export const founderStory = {
   quote:
     "Every business I worked with had the same underlying problem. Strong operation during hours. Nothing after. The AI existed to solve it — but everything built to solve it sounded like a machine, soulless at exactly the moment a buyer needed to feel handled. That was the design problem worth solving.",
   body:
-    "Zach built Velaeva after 15 years working across enterprise database operations, SaaS client acquisition in New York, and operations consulting for high-ticket service businesses across Europe. What he kept finding was the same problem in different clothes: sharp operators losing warm revenue not because of bad service — but because no one was there when the buyer was ready. Velaeva is the system he kept wishing someone else would build.",
+    "Zach came up through Oracle database operations, moved into SaaS client acquisition in New York, then spent years consulting on operations for high-ticket service businesses across Europe. Same problem, every time: sharp operators losing warm revenue not because of bad service — but because no one was there when the buyer was ready. Velaeva is the system he kept wishing someone else would build.",
   image: "/media/founder-portrait.jpg",
   proofNote: "",
 } as const;

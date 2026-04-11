@@ -43,7 +43,7 @@ export function SiteHeader() {
 
           <div className="relative flex items-center justify-between gap-4">
             <a
-              href="#top"
+              href="/"
               className="min-w-0"
               aria-label="Velaeva.com home"
             >
@@ -64,7 +64,7 @@ export function SiteHeader() {
 
             <div className="flex items-center gap-2">
               <Button asChild variant="ghost" className="hidden sm:inline-flex">
-                <a href="#demo">Try the Demo</a>
+                <a href="/#demo">Try the Demo</a>
               </Button>
               <Button asChild className="px-4 text-xs sm:px-5 sm:text-sm">
                 <a href={CALENDLY_URL} target="_blank" rel="noreferrer">

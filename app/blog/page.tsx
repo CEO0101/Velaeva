@@ -28,8 +28,36 @@ export const metadata: Metadata = {
 export default function BlogPage() {
   const articles = getAllArticles();
 
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    name: "Velaeva Blog",
+    description:
+      "Practical insight on after-hours lead capture, AI concierge systems, and the operational gaps costing service businesses revenue every night.",
+    url: "https://www.velaeva.com/blog",
+    publisher: {
+      "@type": "Organization",
+      name: "Velaeva",
+      url: "https://www.velaeva.com",
+    },
+    blogPost: articles.map((article) => ({
+      "@type": "BlogPosting",
+      headline: article.title,
+      url: `https://www.velaeva.com/blog/${article.slug}`,
+      datePublished: article.publishedDate,
+      author: {
+        "@type": "Person",
+        name: article.author,
+      },
+    })),
+  };
+
   return (
     <div className="relative overflow-x-hidden bg-background text-foreground">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
       <SiteHeader />
 
       <main className="mx-auto max-w-7xl px-6 pb-28 pt-36 md:px-8 md:pt-44">
