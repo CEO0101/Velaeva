@@ -9,14 +9,14 @@ export const metadata: Metadata = {
   description:
     "Velaeva installs hands-off AI concierge systems for high-intent businesses that want faster replies, warmer leads, and less front-desk drag.",
   keywords: [
-    "AI concierge for businesses",
-    "AI chatbot for car dealerships",
-    "AI assistant for med spa leads",
+    "AI concierge for service businesses",
     "done-for-you AI chatbot",
+    "after-hours lead capture",
+    "AI customer service",
     "WhatsApp AI concierge",
-    "after-hours lead response",
-    "AI customer service for high-ticket businesses",
-    "real estate AI concierge",
+    "AI lead response",
+    "AI concierge system",
+    "hands-off AI customer service",
   ],
   alternates: {
     canonical: "/",
