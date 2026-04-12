@@ -67,7 +67,7 @@ export default function BookedPage() {
           You're in.
         </h1>
         <p className="mt-5 text-lg leading-8 text-foreground/64">
-          Zach will be on the call personally. Not a sales rep. Not an intro screen. Him — with your operation already pulled up.
+          Zach takes every first call himself. Your operation will already be mapped before you speak — so the 20 minutes go straight to what matters.
         </p>
 
         {/* Divider */}
