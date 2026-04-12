@@ -22,9 +22,12 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   icons: {
-    icon: [{ url: "/icon.svg", type: "image/svg+xml" }],
-    shortcut: ["/icon.svg"],
-    apple: [{ url: "/icon.svg" }],
+    icon: [
+      { url: "/icon.svg", type: "image/svg+xml" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
+    ],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/icon.png", sizes: "192x192" }],
   },
   openGraph: {
     title: "Velaeva.com | Hands-Off AI Concierge For High-Ticket Businesses",
