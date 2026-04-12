@@ -67,7 +67,7 @@ export default function BookedPage() {
           You're in.
         </h1>
         <p className="mt-5 text-lg leading-8 text-foreground/64">
-          Zach takes every first call himself. Your operation will already be mapped before you speak — so the 20 minutes go straight to what matters.
+          Zach takes every first call himself. You will leave with more clarity on your business than you have had in a long time — whether it is the right fit or not. Expect a straight conversation across operations, gaps, and where AI actually moves the needle for you.
         </p>
 
         {/* Divider */}
