@@ -33,8 +33,8 @@ export const metadata: Metadata = {
     title: "Velaeva.com | Hands-Off AI Concierge For High-Ticket Businesses",
     description:
       "A done-for-you AI concierge that handles after-hours questions, lead capture, and follow-up without turning into another dashboard for the owner.",
-    url: "https://velaeva.com",
-    siteName: "Velaeva.com",
+    url: "https://www.velaeva.com",
+    siteName: "Velaeva",
     locale: "en_US",
     type: "website",
   },
