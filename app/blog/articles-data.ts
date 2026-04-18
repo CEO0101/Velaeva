@@ -119,6 +119,69 @@ export const articles: ArticleMetadata[] = [
       "AI implementation"
     ],
   },
+  {
+    slug: "ai-receptionist-vs-concierge-high-ticket",
+    title: "The £38,000 Test Drive That Nearly Didn't Happen: What AI Receptionists Cost High-Ticket Businesses",
+    metaDescription: "A buyer nearly didn't come in because an AI receptionist couldn't answer whether a car came in blue. Here is the failure mode that costs high-ticket businesses the most.",
+    excerpt: "A buyer walked into a car dealership, sat down, and opened with this: 'I asked your chatbot whether the car came in blue. It said it didn't know. I nearly didn't come.'",
+    author: "Zach Vivek",
+    authorRole: "Founder, Velaeva",
+    publishedDate: "2026-01-28",
+    readingTime: 10,
+    category: "AI & Automation",
+    keywords: [
+      "AI receptionist vs AI concierge",
+      "AI receptionist problems high ticket business",
+      "why AI receptionist doesn't work",
+      "after hours AI service business",
+      "high value enquiry gap",
+      "high value response window",
+      "AI for service business",
+      "done-for-you AI concierge"
+    ],
+  },
+  {
+    slug: "enquiry-gap-index",
+    title: "The Enquiry Gap Index: How Much Revenue Is Your Service Business Losing After Hours",
+    metaDescription: "Most service business owners have never calculated what their after-hours silence costs. Here is the exact framework — with real numbers for car dealerships, med spas, and real estate agencies.",
+    excerpt: "Most service business owners have never calculated this number. Not approximately. Not roughly. They have never sat down with their actual enquiry data and worked out what the silence costs.",
+    author: "Zach Vivek",
+    authorRole: "Founder, Velaeva",
+    publishedDate: "2026-02-19",
+    readingTime: 8,
+    category: "Business Strategy",
+    keywords: [
+      "after hours revenue loss",
+      "how much do businesses lose after hours",
+      "cost of missed leads service business",
+      "enquiry gap index",
+      "after hours lead conversion rate",
+      "missed enquiry cost",
+      "high ticket lead response time",
+      "service business revenue gap"
+    ],
+  },
+  {
+    slug: "rag-vs-calibration-ai-concierge",
+    title: "RAG vs Fine-Tuning vs Calibration: What 'Trained on Your Business' Actually Means",
+    metaDescription: "Every AI tool claims to be trained on your business. Most are running document search. Here is what the three approaches actually produce — and why the difference matters commercially.",
+    excerpt: "The phrase has become so standard in AI marketing that it has nearly lost meaning. 'Trained on your business.' Upload your FAQ. Connect your website. The AI 'knows' your business. Done.",
+    author: "Zach Vivek",
+    authorRole: "Founder, Velaeva",
+    publishedDate: "2026-03-28",
+    readingTime: 12,
+    category: "AI & Automation",
+    keywords: [
+      "RAG vs fine-tuning AI",
+      "retrieval augmented generation vs fine-tuning",
+      "how to train AI on your business",
+      "AI concierge calibration",
+      "RAG for customer service AI",
+      "custom AI for business",
+      "AI trained on business data",
+      "AI concierge implementation"
+    ],
+  },
 ];
 
 export function getArticleBySlug(slug: string): ArticleMetadata | undefined {
