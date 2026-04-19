@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.velaeva.com"),
   title: "Velaeva | Hands-Off AI Concierge For High-Ticket Businesses",
   description:
-    "Velaeva installs hands-off AI concierge systems for high-intent businesses that want faster replies, warmer leads, and less front-desk drag.",
+    "Velaeva installs hands-off AI concierge systems that handle after-hours enquiries, warm leads, and reduce front-desk drag — without hiring.",
   keywords: [
     "AI concierge for service businesses",
     "done-for-you AI chatbot",

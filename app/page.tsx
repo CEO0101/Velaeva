@@ -8,6 +8,7 @@ import {
   siIntercom,
   siStripe,
   siWhatsapp,
+  siX,
 } from "simple-icons";
 
 import {
@@ -63,6 +64,11 @@ export default function Home() {
       url: "https://www.velaeva.com",
       logo: "https://www.velaeva.com/icon.svg",
       email: "hello@velaeva.com",
+      sameAs: [
+        "https://www.linkedin.com/company/velaeva-ai",
+        "https://x.com/ZachVivek",
+        "https://www.crunchbase.com/organization/velaeva-inc",
+      ],
       description:
         "Velaeva installs done-for-you AI concierge systems for high-intent service businesses that want faster replies, warmer leads, and less front-desk drag — without hiring.",
       founder: {
@@ -817,7 +823,7 @@ export default function Home() {
               className="inline-flex items-center gap-3 transition-colors hover:text-foreground"
             >
               <Mail className="h-4 w-4 text-primary" />
-              hello@velaeva.com
+              <span>hello&#64;velaeva&#46;com</span>
             </a>
             <a
               href={CALENDLY_URL}
@@ -828,6 +834,30 @@ export default function Home() {
               <ArrowRight className="h-4 w-4 text-primary" />
               Book a Free 20-Minute Call
             </a>
+            <div className="flex items-center gap-4 pt-1">
+              <a
+                href="https://www.linkedin.com/company/velaeva-ai"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Velaeva on LinkedIn"
+                className="transition-colors hover:text-foreground"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                </svg>
+              </a>
+              <a
+                href="https://x.com/ZachVivek"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Zach Vivek on X"
+                className="transition-colors hover:text-foreground"
+              >
+                <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+                  <path d={siX.path} />
+                </svg>
+              </a>
+            </div>
           </div>
         </div>
 
