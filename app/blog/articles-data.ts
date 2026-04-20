@@ -1,6 +1,7 @@
 export interface ArticleMetadata {
   slug: string;
   title: string;
+  seoTitle?: string;
   metaDescription: string;
   excerpt: string;
   author: string;
@@ -17,6 +18,7 @@ export const articles: ArticleMetadata[] = [
   {
     slug: "the-11pm-problem",
     title: "The 11 PM Problem: Why Your Best Leads Are Already Gone Before You Wake Up",
+    seoTitle: "The 11 PM Problem: Why Your Best Leads Are Gone",
     metaDescription: "Why 31% of high-intent leads arrive after hours—and what it costs your business every night. A deep dive into the revenue problem nobody's calculating.",
     excerpt: "I want to tell you about a Tuesday night that changed how I think about revenue. I was sitting with the owner of a boutique tourism company in Lisbon...",
     author: "Zach Vivek",
@@ -38,6 +40,7 @@ export const articles: ArticleMetadata[] = [
   {
     slug: "true-cost-missed-enquiry",
     title: "I Asked 12 Business Owners What a Missed Enquiry Costs Them. None of Them Knew.",
+    seoTitle: "What a Missed Enquiry Really Costs a Business",
     metaDescription: "Most businesses don't track lost leads. Here's the math on what each missed high-intent enquiry actually costs—and it's far higher than you think.",
     excerpt: "Not approximately. Not roughly. Not 'somewhere around.' None of them had actually calculated it. These were not careless operators...",
     author: "Zach Vivek",
@@ -59,6 +62,7 @@ export const articles: ArticleMetadata[] = [
   {
     slug: "why-ai-chatbots-fail",
     title: "Why AI Chatbots Fail at After-Hours Lead Capture (And What the Difference Actually Looks Like)",
+    seoTitle: "Why AI Chatbots Fail at After-Hours Lead Capture",
     metaDescription: "The gap between a chatbot that replies and a concierge that actually represents your business. Why most AI tools fail when it matters most.",
     excerpt: "Three years ago, a car dealership owner I was advising installed a chatbot. He was proud of it. It was well-reviewed, cost a reasonable monthly fee...",
     author: "Zach Vivek",
@@ -80,6 +84,7 @@ export const articles: ArticleMetadata[] = [
   {
     slug: "ai-vs-hiring-the-math",
     title: "AI Concierge vs. Hiring: The Maths Every Service Business Should Run Before Deciding",
+    seoTitle: "AI Concierge vs. Hiring: The Maths Service Businesses Should Run",
     metaDescription: "Real numbers on AI concierge vs. hiring part-time staff. The cost breakdown, quality comparison, and when each option actually makes sense.",
     excerpt: "The question I get asked most often — after someone understands what Velaeva actually does — is some version of this...",
     author: "Zach Vivek",
@@ -101,6 +106,7 @@ export const articles: ArticleMetadata[] = [
   {
     slug: "what-trained-on-your-business-means",
     title: "\"Trained on Your Business\" — What It Means When It's Real, and What It Means When It Isn't",
+    seoTitle: "\"Trained on Your Business\": What It Really Means",
     metaDescription: "The difference between document retrieval and genuine training. Why most AI tools fall short—and what real calibration actually looks like.",
     excerpt: "Every AI tool in the customer service space will tell you they can be trained on your business. It's become such a standard marketing phrase...",
     author: "Zach Vivek",

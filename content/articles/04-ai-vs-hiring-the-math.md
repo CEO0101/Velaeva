@@ -99,4 +99,4 @@ If the maths doesn't immediately make the decision for you, the call is worth ha
 
 *Zach Vivek is the founder of Velaeva. He built the system after spending years watching high-quality businesses lose revenue to operational gaps that had clear, buildable solutions.*
 
-*→ [Book a free 20-minute call — no pitch, just the maths for your business](https://velaeva.com)*
+*→ [Book a free 20-minute call — no pitch, just the maths for your business](https://www.velaeva.com)*

@@ -112,4 +112,4 @@ That's exactly what I built Velaeva to do. And it takes five days to go from tha
 
 *Zach Vivek is the founder of Velaeva. Before building Velaeva, he worked in enterprise operations at Oracle, client acquisition consulting for professional services firms in New York, and business operations and branding across Europe. He built Velaeva because the problem kept showing up everywhere he worked — and nothing built to solve it actually worked.*
 
-*→ [Calculate your timing gap — book a free 20-minute call](https://velaeva.com)*
+*→ [Calculate your timing gap — book a free 20-minute call](https://www.velaeva.com)*

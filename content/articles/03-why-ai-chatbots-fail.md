@@ -104,4 +104,4 @@ That's what fixing the calibration problem actually looks like.
 
 *Zach Vivek is the founder of Velaeva. He's spent years watching good businesses lose revenue to preventable operational gaps — and built the system he kept wishing someone else would build.*
 
-*→ [See what Velaeva looks like for your business](https://velaeva.com)*
+*→ [See what Velaeva looks like for your business](https://www.velaeva.com)*

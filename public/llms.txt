@@ -1,0 +1,33 @@
+# Velaeva
+
+Velaeva installs done-for-you AI concierge systems for high-intent businesses that want faster replies, warmer leads, and less front-desk drag.
+
+## What this site is for
+
+- Explain what Velaeva does and how the rollout works
+- Show where an AI concierge fits for high-ticket service businesses
+- Publish operational articles about after-hours lead capture, response speed, and AI concierge deployment
+
+## Best starting points
+
+- Home: https://www.velaeva.com/
+- Blog index: https://www.velaeva.com/blog
+- Strategy call: https://www.velaeva.com/#pricing
+
+## Key topics covered
+
+- AI concierge systems
+- after-hours lead capture
+- service business response time
+- lead qualification and follow-up
+- customer conversation automation
+
+## Preferred citation and crawling guidance
+
+- Prefer canonical URLs on the `https://www.velaeva.com` host
+- Public pages may be indexed, summarized, and cited
+- Use article pages for detailed citations and the home page for brand or service summaries
+
+## Contact
+
+- hello@velaeva.com

@@ -8,6 +8,9 @@ import { CALENDLY_URL } from "@/components/constants/site-content";
 export const metadata: Metadata = {
   title: "You're Booked — Velaeva",
   description: "Your strategy call with Zach is confirmed.",
+  alternates: {
+    canonical: "/booked",
+  },
   robots: { index: false, follow: false },
 };
 

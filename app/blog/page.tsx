@@ -9,17 +9,17 @@ import { CALENDLY_URL } from "@/components/constants/site-content";
 import { getAllArticles } from "./articles-data";
 
 export const metadata: Metadata = {
-  title: "Velaeva Blog — AI Concierge Insights for Service Businesses",
+  title: "Velaeva Blog | AI Concierge Insights & Guides",
   description:
     "Practical insight on after-hours lead capture, AI concierge systems, and the operational gaps costing service businesses revenue every night.",
   alternates: {
     canonical: "/blog",
   },
   openGraph: {
-    title: "Velaeva Blog — AI Concierge Insights for Service Businesses",
+    title: "Velaeva Blog | AI Concierge Insights & Guides",
     description:
       "Practical insight on after-hours lead capture, AI concierge systems, and the operational gaps costing service businesses revenue every night.",
-    url: "https://velaeva.com/blog",
+    url: "https://www.velaeva.com/blog",
     siteName: "Velaeva",
     type: "website",
   },

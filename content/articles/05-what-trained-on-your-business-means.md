@@ -104,4 +104,4 @@ That's what training on a business is supposed to produce.
 
 *Zach Vivek is the founder of Velaeva, a done-for-you AI concierge service for high-intent service businesses. The calibration work is the service. The technology is the infrastructure.*
 
-*→ [See what a properly calibrated concierge looks like for your business](https://velaeva.com)*
+*→ [See what a properly calibrated concierge looks like for your business](https://www.velaeva.com)*

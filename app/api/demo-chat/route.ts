@@ -203,7 +203,7 @@ async function callOpenRouter(
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
-      "HTTP-Referer": "https://velaeva.com",
+      "HTTP-Referer": "https://www.velaeva.com",
       "X-Title": "Velaeva Demo",
     },
     body: JSON.stringify({

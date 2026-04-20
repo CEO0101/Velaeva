@@ -2,3 +2,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://www.velaeva.com/sitemap.xml
+Host: https://www.velaeva.com

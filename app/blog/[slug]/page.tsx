@@ -23,19 +23,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const article = getArticleBySlug(slug);
   if (!article) return {};
+  const title = article.seoTitle ?? article.title;
 
   return {
-    title: `${article.title} — Velaeva`,
+    title,
     description: article.metaDescription,
     keywords: article.keywords,
-    authors: [{ name: article.author, url: "https://velaeva.com" }],
+    authors: [{ name: article.author, url: "https://www.velaeva.com" }],
     alternates: {
       canonical: `/blog/${article.slug}`,
     },
     openGraph: {
-      title: article.title,
+      title,
       description: article.metaDescription,
-      url: `https://velaeva.com/blog/${article.slug}`,
+      url: `https://www.velaeva.com/blog/${article.slug}`,
       siteName: "Velaeva",
       type: "article",
       publishedTime: article.publishedDate,
@@ -43,7 +44,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     twitter: {
       card: "summary_large_image",
-      title: article.title,
+      title,
       description: article.metaDescription,
     },
   };
@@ -71,18 +72,18 @@ export default async function ArticlePage({ params }: Props) {
       "@type": "Person",
       name: article.author,
       jobTitle: article.authorRole,
-      url: "https://velaeva.com",
+      url: "https://www.velaeva.com",
     },
     publisher: {
       "@type": "Organization",
       name: "Velaeva",
-      url: "https://velaeva.com",
+      url: "https://www.velaeva.com",
     },
     datePublished: article.publishedDate,
     dateModified: article.updatedDate ?? article.publishedDate,
     mainEntityOfPage: {
       "@type": "WebPage",
-      "@id": `https://velaeva.com/blog/${article.slug}`,
+      "@id": `https://www.velaeva.com/blog/${article.slug}`,
     },
     keywords: article.keywords.join(", "),
   };

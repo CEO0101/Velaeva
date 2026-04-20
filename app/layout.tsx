@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.velaeva.com"),
-  title: "Velaeva | Hands-Off AI Concierge For High-Ticket Businesses",
+  title: "Velaeva | AI Concierge for High-Ticket Businesses",
   description:
     "Velaeva installs hands-off AI concierge systems that handle after-hours enquiries, warm leads, and reduce front-desk drag — without hiring.",
   keywords: [
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/icon.png", sizes: "192x192" }],
   },
   openGraph: {
-    title: "Velaeva.com | Hands-Off AI Concierge For High-Ticket Businesses",
+    title: "Velaeva | AI Concierge for High-Ticket Businesses",
     description:
       "A done-for-you AI concierge that handles after-hours questions, lead capture, and follow-up without turning into another dashboard for the owner.",
     url: "https://www.velaeva.com",
@@ -42,7 +42,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Velaeva.com | Hands-Off AI Concierge For High-Ticket Businesses",
+    title: "Velaeva | AI Concierge for High-Ticket Businesses",
     description:
       "Velaeva installs a hands-off AI concierge that keeps leads warm, handles customer questions, and reduces front-desk drag.",
   },

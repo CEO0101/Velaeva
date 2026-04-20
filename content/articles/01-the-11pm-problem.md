@@ -106,4 +106,4 @@ If you want to understand what that gap costs you specifically — not in the ab
 
 *Zach Vivek is the founder of Velaeva, a done-for-you AI concierge system for high-intent service businesses. He spent years in enterprise database operations at Oracle, client acquisition consulting in Manhattan, and operations and branding work with small and mid-size businesses across Europe. Velaeva is the system he kept wishing existed.*
 
-*→ [Book a free 20-minute call](https://velaeva.com)*
+*→ [Book a free 20-minute call](https://www.velaeva.com)*
