@@ -11,6 +11,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/booked",
   },
+  openGraph: {
+    title: "You're Booked — Velaeva",
+    description: "Your strategy call with Zach is confirmed.",
+    url: "https://www.velaeva.com/booked",
+    siteName: "Velaeva",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "You're Booked — Velaeva",
+    description: "Your strategy call with Zach is confirmed.",
+  },
   robots: { index: false, follow: false },
 };
 
