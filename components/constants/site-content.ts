@@ -243,7 +243,7 @@ export const founderStory = {
     "Every business I worked with had the same underlying problem. Strong operation during hours. Nothing after. The AI existed to solve it — but everything built to solve it sounded like a machine, soulless at exactly the moment a buyer needed to feel handled. That was the design problem worth solving.",
   body:
     "Zach came up through Oracle database operations, moved into SaaS client acquisition in New York, then spent years consulting on operations for high-ticket service businesses across Europe. Same problem, every time: sharp operators losing warm revenue not because of bad service — but because no one was there when the buyer was ready. Velaeva is the system he kept wishing someone else would build.",
-  image: "/media/founder-portrait.jpg",
+  image: "/media/founder-portrait-podium.jpg",
   proofNote: "",
 } as const;
 
