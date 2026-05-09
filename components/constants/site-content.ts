@@ -272,21 +272,35 @@ export const howItWorksSteps = [
 ] as const;
 
 export const caseStudy = {
-  client: "Tourism operator rollout",
-  industry: "Tourism enquiries · bookings · multilingual guest follow-up",
+  client: "Six months on the ground",
+  industry: "Tourism · jewelry · boutique retail · real estate · boutique law",
   context:
-    "Across the last 6 months, Velaeva has gone live with 8 small businesses spanning tourism, jewelry, boutique retail, real estate, and boutique law. This tourism rollout is the clearest operational example of how the framework behaves in practice.",
-  challenge:
-    "Guest questions about availability, package differences, pickup timing, and payment terms kept landing after hours. By morning, the warmest enquiries either needed to be re-qualified from scratch or were already gone.",
-  solution:
-    "We connected booking steps, package logic, timing rules, multilingual replies, and human escalation into one operating flow across WhatsApp, web, and email. The assistant learned the business's tone, rules, and edge cases, while every conversation stayed visible to the team.",
+    "Different industries on the surface. Same pattern underneath: strong operations during hours, silence after. Here is what the framework did across all of them.",
+  sectors: [
+    {
+      name: "Tourism",
+      note: "Multilingual booking flow across WhatsApp, web, and email — guest enquiries qualified before morning.",
+    },
+    {
+      name: "Jewelry & boutique retail",
+      note: "After-hours availability, sizing, and pricing questions handled in the buyer's window, not the next day's.",
+    },
+    {
+      name: "Real estate",
+      note: "Listing enquiries triaged and qualified before an agent touched them — warm handoffs, not cold restarts.",
+    },
+    {
+      name: "Boutique law",
+      note: "Intake screening with the right tone for sensitive first contact — calm, composed, never clinical.",
+    },
+  ],
   fieldNote:
-    "What changed was not just speed. The first reply already felt usable: clear, on-brand, and pointed toward the next step instead of creating another loose end.",
+    "What changed was not just speed. The first reply already felt usable — clear, on-brand, pointing toward the next step instead of creating another loose end.",
   results: [
-    { value: "8", label: "Small businesses launched on the same framework over the last 6 months" },
-    { value: "99.9%", label: "Observed uptime across live deployments with no owner babysitting required" },
-    { value: "4", label: "Languages handled across guest-facing and service workflows" },
-    { value: "24/7", label: "Coverage across evenings, weekends, and the hours small teams cannot staff" },
+    { value: "8", label: "Businesses live on the same framework" },
+    { value: "99.9%", label: "Uptime across deployments — no owner babysitting" },
+    { value: "4", label: "Languages handled across guest-facing flows" },
+    { value: "24/7", label: "Coverage where small teams cannot staff" },
   ],
 } as const;
 

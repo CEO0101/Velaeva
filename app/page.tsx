@@ -348,9 +348,9 @@ export default function Home() {
         <section className="border-t border-[#123b6b]/10 bg-[#f2ebe0] py-20 md:py-28">
           <div className="mx-auto max-w-7xl px-6 md:px-8">
             <SectionHeading
-              eyebrow="Representative Case Study"
-              title="One tourism rollout shows what steady coverage actually changed."
-              description="Anonymized by request, but structurally representative: high-intent messages, mixed channels, a small team, and real after-hours demand."
+              eyebrow="Six months in"
+              title="Eight businesses live on the same framework."
+              description="Tourism, jewelry, boutique retail, real estate, boutique law — different industries, same after-hours pattern. Here is what the framework actually changed."
             />
 
             <FadeIn className="mt-14" delay={0.1}>
@@ -390,51 +390,45 @@ export default function Home() {
                 </div>
 
                 {/* Content */}
-                <div className="grid gap-10 px-8 py-8 md:grid-cols-[1.15fr_0.85fr] md:px-10 md:py-10 lg:gap-14">
-                  <div className="space-y-8">
-                    <div>
-                      <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#355884]/52">
-                        The problem
+                <div className="px-8 py-8 md:px-10 md:py-10">
+                  <p className="max-w-3xl text-base leading-8 text-foreground/72">
+                    {caseStudy.context}
+                  </p>
+
+                  <div className="mt-10 grid gap-px overflow-hidden rounded-[1.25rem] bg-[#123b6b]/8 sm:grid-cols-2">
+                    {caseStudy.sectors.map((sector) => (
+                      <div key={sector.name} className="bg-background/60 p-6 md:p-7">
+                        <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#355884]/56">
+                          {sector.name}
+                        </div>
+                        <p className="mt-3 text-sm leading-7 text-foreground/68">
+                          {sector.note}
+                        </p>
                       </div>
-                      <p className="mt-4 text-base leading-8 text-foreground/72">
-                        {caseStudy.challenge}
-                      </p>
-                    </div>
-                    <div>
-                      <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#355884]/52">
-                        What we built
-                      </div>
-                      <p className="mt-4 text-base leading-8 text-foreground/72">
-                        {caseStudy.solution}
-                      </p>
-                    </div>
-                    <div>
-                      <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#355884]/52">
-                        What changed on the ground
-                      </div>
-                      <p className="mt-4 max-w-2xl font-heading text-2xl leading-[1.2] tracking-[-0.04em] text-foreground/86">
-                        {caseStudy.fieldNote}
-                      </p>
-                    </div>
+                    ))}
                   </div>
 
-                  <div className="border-t border-[#123b6b]/10 pt-8 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+                  <div className="mt-10 border-t border-[#123b6b]/10 pt-8">
                     <div className="font-mono text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-[#355884]/52">
-                      After 6 months
+                      Across all of them
                     </div>
-                    <div className="mt-5 divide-y divide-[#123b6b]/8">
+                    <div className="mt-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                       {caseStudy.results.map((r) => (
-                        <div key={r.label} className="py-5">
-                          <div className="font-heading text-3xl font-semibold tracking-[-0.05em] text-foreground">
+                        <div key={r.label}>
+                          <div className="font-heading text-4xl font-semibold tracking-[-0.05em] text-foreground md:text-[2.6rem]">
                             {r.value}
                           </div>
-                          <p className="mt-1 text-sm leading-7 text-foreground/58">
+                          <p className="mt-2 text-sm leading-7 text-foreground/60">
                             {r.label}
                           </p>
                         </div>
                       ))}
                     </div>
                   </div>
+
+                  <p className="mt-10 max-w-3xl border-t border-[#123b6b]/10 pt-8 font-heading text-xl leading-[1.4] tracking-[-0.025em] text-foreground/82 md:text-2xl">
+                    {caseStudy.fieldNote}
+                  </p>
                 </div>
               </div>
             </FadeIn>
